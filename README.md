@@ -77,4 +77,19 @@ To create coverageThreshold, add the jest config to package.json
 - Third party code ( dont test a imported library component, only  test the  parent component thats rendering the component)
 - Code that is not important from user POV
 
+1. RTL Queries
+Queries are the methods that testing library provides to find elements on the page
+
+* to find a single element on the page
+  * `getBy..`
+  * `findBy..`
+  * `queryBy..`
+
+* to find multiple elements on the page 
+ * `getAllBy..`
+ * `QueryAllBy..`
+ * `findAllBy..`
+
+These methods need to be combinded with suffix to form the actual query.
+The Suffix can be one of `Role`, `LabelText`, `PlaceHolderText`, `Text`, `DisplayValue`, `AltText`, `Title` and `TestId`
 
