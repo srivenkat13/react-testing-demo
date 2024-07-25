@@ -15,6 +15,9 @@ describe("Application", () => {
     });
     expect(sectionHeading).toBeInTheDocument();
 
+    const paraElement = screen.getByText("All Fields are Mandatory");
+    expect(paraElement).toBeInTheDocument();
+
     const nameElement = screen.getByRole("textbox", {
       name: "Name",
     });
@@ -28,6 +31,9 @@ describe("Application", () => {
     // alternate method
     const nameElement3 = screen.getByPlaceholderText("Fullname");
     expect(nameElement3).toBeInTheDocument();
+    //alternate method
+    const nameElement4 = screen.getByDisplayValue("Venkat");
+    expect(nameElement4).toBeInTheDocument();
 
     const bioElement = screen.getByRole("textbox", {
       name: "Bio",
