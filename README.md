@@ -93,3 +93,4 @@ Queries are the methods that testing library provides to find elements on the pa
 These methods need to be combinded with suffix to form the actual query.
 The Suffix can be one of `Role`, `LabelText`, `PlaceHolderText`, `Text`, `DisplayValue`, `AltText`, `Title` and `TestId`
 
+a. getByRole('role' ,{option})
