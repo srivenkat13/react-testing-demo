@@ -26,3 +26,9 @@ While Jest is a Test Runner and React Testing Library is specific to react ecosy
     * describe('name',test fns)
     * can be nested
     * has .only and .skip
+9. File naming conventions
+    - Files with .test.js or .test.tsx suffix
+    - Files with .spec.js or .spec.tsx suffix
+    - Files with .js or tsx suffix in __tests __ folder
+
+jest not only has` test() `method but also `it()`, which inturn has `fit()` for `test.only()` and `xit()` for`test.skip()`
