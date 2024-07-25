@@ -32,3 +32,30 @@ While Jest is a Test Runner and React Testing Library is specific to react ecosy
     - Files with .js or tsx suffix in __tests __ folder
 
 jest not only has` test() `method but also `it()`, which inturn has `fit()` for `test.only()` and `xit()` for`test.skip()`
+10. Code Coverage
+ Its a ,etric that helps you understand how much of code is tested 
+    - Statement Coverage
+    - Branch Coverage
+    - Line Coverage
+    - Function Coverage
+`"coverage": "react-scripts test --coverage --watchAll"` script to generate coverage report 
+ add `--collectCoverageFrom='src/components/**/*.{ts,tsx}' ` flag to cover only components folder
+add `--collectCoverageFrom='!src/components/**/*.{types,storires,constants,spec,test}.{ts,tsx}'",` to ignore specific files
+
+To create coverageThreshold, add the jest config to package.json
+```json
+"jest": {
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": -10
+        //allows 10 uncovered statements
+      }
+    }
+  }
+  ```
+
+- There is a html file to display code coverage report 
+
