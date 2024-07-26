@@ -117,5 +117,6 @@ h. getByTestId()
     g. getByTitle()
       h. getByTestId()
 
-  
+ ## Querying Multiple Elements in DOM
 
+ use `getAllByRole` to capture multiple elements of same role, and assert them against `.toHaveLength()`
