@@ -77,6 +77,9 @@ To create coverageThreshold, add the jest config to package.json
 - Third party code ( dont test a imported library component, only  test the  parent component thats rendering the component)
 - Code that is not important from user POV
 
+
+## Single element Queries
+
 1. RTL Queries
 Queries are the methods that testing library provides to find elements on the page
 
@@ -98,3 +101,21 @@ b. getByLabelText('text' ,{selector})
 c. getByPlaceholderText()
 d. getByText()
 e. getByDisplayValue()
+f. getByAltText()
+g. getByTitle()
+h. getByTestId()
+
+2. Priority Order of Queries 
+ 'your test should resemble  how users interact with your code, as much as possible'
+ - preffered Order  as per RTL:
+  a. getByRole()
+  b. getByLabelText()
+  c. getByPlaceholderText()
+  d. getByText()
+  e. getByDisplayValue()
+    f. getByAltText()
+    g. getByTitle()
+      h. getByTestId()
+
+  
+
