@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type SkillsProps = {
   skills?: string[];
@@ -8,6 +8,15 @@ type SkillsProps = {
 export const Skills = (props: SkillsProps) => {
   const [isLoggedin, setIsLoggedin] = useState(false);
   const { skills } = props;
+  useEffect(() => {
+    const interval = setTimeout(() => {
+      setIsLoggedin(true);
+    }, 500);
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
   return (
     <>
       <ul style={props.styles}>

@@ -139,3 +139,31 @@ not only we can pass text like above example, we can also pass regex and functio
 2.queryAllBy
 
 . Returns an array of all matching nodes for a query, and return an empty array if no elements match
+
+## findBy
+
+- getBy and getAlIBy class of queries to assert if elements are present in the DOM
+
+- queryBy and queryAlIBy class of queries to assert if elements are not present in
+the DOM
+
+**Appearance / Disappearance**
+
+- What if elements are not present in the DOM to begin but make their way into the
+DOM after some time?
+
+- For example, data that is fetched from a server will be rendered only after a few
+milliseconds
+
+**findBy**
+
+. Returns a Promise which resolves when an element is found which matches the
+given query
+. The promise is rejected if no element is found or if more than one element is found
+after a default timeout of 1000ms
+
+**findAlIBy**
+
+. Returns a promise which resolves to an array of elements when any elements are
+found which match the given query
+. The promise is rejected if no elements are found after a default timeout of 1000ms
