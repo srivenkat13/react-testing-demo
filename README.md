@@ -128,3 +128,14 @@ all the `.getBy()` methods expect a textMatch type as argument
 not only we can pass text like above example, we can also pass regex and functions 
     `const textElement = screen.getByText(/hello/i);`
     `const textElement = screen.getByText((content)=> content.contains('hello'));`
+
+## queryBy and queryAlIBy
+1.queryBy
+
+. Returns the matching node for a query, and return null if no elements match
+. Useful for asserting an element that is not present
+. Throws an error if more than one match is found
+
+2.queryAllBy
+
+. Returns an array of all matching nodes for a query, and return an empty array if no elements match
