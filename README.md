@@ -120,3 +120,11 @@ h. getByTestId()
  ## Querying Multiple Elements in DOM
 
  use `getAllByRole` to capture multiple elements of same role, and assert them against `.toHaveLength()`
+
+## TextMatch
+
+all the `.getBy()` methods expect a textMatch type as argument 
+    `const textElement = screen.getByText(`Hello`);`
+not only we can pass text like above example, we can also pass regex and functions 
+    `const textElement = screen.getByText(/hello/i);`
+    `const textElement = screen.getByText((content)=> content.contains('hello'));`
