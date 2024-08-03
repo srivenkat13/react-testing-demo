@@ -171,3 +171,21 @@ found which match the given query
 ## Debugging a test
 
   either `screen.debugg()` statement or `logView(view.container)` are  used.
+
+## User Interaction
+`user-event `library is used to simulate user interactions, so we can test components response to user interaction.
+There is an alternatie method in RTL called `fireEvent` , but user-event is superior.
+
+
+### Pointer Interactions 
+```jsx
+import user from @testing-library/user-event
+test("Renders count of 1 after clicking Increment", async () => {
+    user.setup();
+    render(<Counter />);
+    const IncrementButton = screen.getByRole("button", { name: "Increment" });
+    await user.click(IncrementButton);
+    const countElement = screen.getByRole("heading");
+    expect(countElement).toHaveTextContent("1");
+  });
+```
