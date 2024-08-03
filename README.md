@@ -189,3 +189,13 @@ test("Renders count of 1 after clicking Increment", async () => {
     expect(countElement).toHaveTextContent("1");
   });
 ```
+### Keyboard interactions
+* type()
+* tab()
+* clear()
+* selectOptions()
+* deSelectOptions()
+* cut()
+* paste()
+* copy()
+* upload()
