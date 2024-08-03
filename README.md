@@ -167,3 +167,7 @@ after a default timeout of 1000ms
 . Returns a promise which resolves to an array of elements when any elements are
 found which match the given query
 . The promise is rejected if no elements are found after a default timeout of 1000ms
+
+## Debugging a test
+
+  either `screen.debugg()` statement or `logView(view.container)` are  used.
